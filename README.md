@@ -30,7 +30,7 @@ $ scp -r user1@host1IPAddr:absolutePath1 user2@host2IPAddr:absolutePath2
 
 ### Finding locations of a file 
 
-Here we use _**find**_ command to find the location/path where a file exists
+Here we use _**find**_ command to find the location/path where a file exists. See [man page for find](http://man7.org/linux/man-pages/man1/find.1.html) for more details
 
 #### find command to find a file from root folder 
 
