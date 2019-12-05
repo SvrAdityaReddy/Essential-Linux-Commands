@@ -1,4 +1,4 @@
-# Essential-Linux-Android-Commands
+# Essential-Linux-Commands
 
 ### Transfer Folder/Files from one Host to other Host
 
@@ -45,5 +45,25 @@ $ find -name fileName /
 ```bash
 
 $ find -name fileName .
+
+```
+
+### Finding which executable current environment referring to
+
+Here we use ***which*** command to find the location of the executable used in current environment. ***which*** command looks for **PATH** variable to find the location of the executable used in current environment. See [man page for which](https://linux.die.net/man/1/which) for more details
+
+```bash
+
+$ which python
+
+```
+
+### Finding location of executable
+
+Here we use ***whereis*** command to find the locations of the executable used. ***where*** command looks for ***common Linux locations***, **PATH**, **MANPATH** variable to find the locations of the executable. See [man page for whereis](http://man7.org/linux/man-pages/man1/whereis.1.html) for more details
+
+```bash
+
+$ whereis python
 
 ```
