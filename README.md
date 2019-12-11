@@ -67,3 +67,18 @@ Here we use ***whereis*** command to find the locations of the executable used. 
 $ whereis python
 
 ```
+
+### Get details of Linux distribution
+
+Here we use ***lsb_release*** command to details of Linux distribution like version. See (man page for lsb_release)[http://manpages.ubuntu.com/manpages/bionic/man1/lsb_release.1.html] for more details
+
+```bash
+
+$ lsb_release -a                                                                                                                  
+No LSB modules are available.                                                                                                                          
+Distributor ID: Ubuntu                                                                                                                                 
+Description:    Ubuntu 18.04.3 LTS                                                                                                                     
+Release:        18.04                                                                                                                                  
+Codename:       bionic
+
+```
