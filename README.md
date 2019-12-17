@@ -48,6 +48,17 @@ $ find -name fileName .
 
 ```
 
+### Search for a string recursively in all files and show it's occurences in files with line numbers
+
+Here we use ***grep*** command to search for a string recursively in all files and show it's occurences in files with line numbers.
+See [man page for grep](http://man7.org/linux/man-pages/man1/grep.1p.html) for more details
+
+```bash
+
+$ grep -rn "word_to_search" /path
+
+```
+
 ### Finding which executable current environment referring to
 
 Here we use ***which*** command to find the location of the executable used in current environment. ***which*** command looks for **PATH** variable to find the location of the executable used in current environment. See [man page for which](https://linux.die.net/man/1/which) for more details
@@ -70,7 +81,7 @@ $ whereis python
 
 ### Get details of Linux distribution
 
-Here we use ***lsb_release*** command to details of Linux distribution like version. See (man page for lsb_release)[http://manpages.ubuntu.com/manpages/bionic/man1/lsb_release.1.html] for more details
+Here we use ***lsb_release*** command to details of Linux distribution like version. See [man page for lsb_release](http://manpages.ubuntu.com/manpages/bionic/man1/lsb_release.1.html) for more details
 
 ```bash
 
@@ -80,5 +91,23 @@ Distributor ID: Ubuntu
 Description:    Ubuntu 18.04.3 LTS                                                                                                                     
 Release:        18.04                                                                                                                                  
 Codename:       bionic
+
+```
+
+### Get File Information like type, 32 bit/64 bit, processor architecture, stripped/unstripped
+
+Here we use ***file*** command to get file Information like type, 32 bit/64 bit, processor architecture, stripped (like removal of debug symbols)/unstripped. See [man page for file](http://man7.org/linux/man-pages/man1/file.1.html) for more details
+
+```bash
+
+$ file libc-2.23.so
+libc-2.23.so: ELF 64-bit LSB shared object, x86-64, version 1 (GNU/Linux), dynamically linked, interpreter /lib64/l, BuildID[sha1]=1ca54a6e0d76188105b12e49fe6b8019bf08803a, for GNU/Linux 2.6.32, stripped
+
+```
+
+```bash
+
+$ file libc-2.23.so
+libc-2.23.so: ELF 32-bit LSB shared object, Intel 80386, version 1 (GNU/Linux), dynamically linked, interpreter /lib/ld-, BuildID[sha1]=9a6b57c7a4f93d7e54e61bccb7df996c8bc58141, for GNU/Linux 2.6.32, stripped
 
 ```
