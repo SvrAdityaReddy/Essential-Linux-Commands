@@ -1,5 +1,45 @@
 # Essential-Linux-Commands
 
+### Environment variables
+
+We use use ***env*** command to see the environment variables. See [man page for env](http://man7.org/linux/man-pages/man1/env.1.html) for more details
+
+```bash
+
+$ env
+
+```
+
+### Changing Directory
+
+We use ***cd*** command to change directory. See [man page for cd](http://man7.org/linux/man-pages/man1/cd.1p.html) for more details
+
+#### To change to home directory of current user
+
+```bash
+
+$ cd ~
+
+```
+
+#### To change to previous working directory
+
+The following command use _OLDPWD_ environment variable to know the previous working directory. 
+
+```bash
+
+$ cd -
+
+```
+
+#### To change to root directory
+
+```bash
+
+$ cd /
+
+```
+
 ### Transfer Folder/Files from one Host to other Host
 
 Here we use _**scp**_ command to transfer files across hosts. See [man page for scp](http://man7.org/linux/man-pages/man1/scp.1.html) for more details
@@ -109,5 +149,19 @@ libc-2.23.so: ELF 64-bit LSB shared object, x86-64, version 1 (GNU/Linux), dynam
 
 $ file libc-2.23.so
 libc-2.23.so: ELF 32-bit LSB shared object, Intel 80386, version 1 (GNU/Linux), dynamically linked, interpreter /lib/ld-, BuildID[sha1]=9a6b57c7a4f93d7e54e61bccb7df996c8bc58141, for GNU/Linux 2.6.32, stripped
+
+```
+
+### Get the processes using a file
+
+Here we use ***lsof*** to know the processes using a file. See [man page for lsof](http://man7.org/linux/man-pages/man8/lsof.8.html) for more details
+
+```bash
+
+$ lsof /lib/x86_64-linux-gnu/libc-2.23.so
+COMMAND    PID       USER  FD   TYPE DEVICE SIZE/OFF   NODE NAME
+systemd      1       root mem    REG  253,1  1868984 528009 /lib/x86_64-linux-gnu/libc-2.23.so
+systemd-u  283       root mem    REG  253,1  1868984 528009 /lib/x86_64-linux-gnu/libc-2.23.so
+dhclient   662       root mem    REG  253,1  1868984 528009 /lib/x86_64-linux-gnu/libc-2.23.so
 
 ```
