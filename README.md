@@ -165,3 +165,15 @@ systemd-u  283       root mem    REG  253,1  1868984 528009 /lib/x86_64-linux-gn
 dhclient   662       root mem    REG  253,1  1868984 528009 /lib/x86_64-linux-gnu/libc-2.23.so
 
 ```
+
+### To know dependent shared objects
+
+Here we use ***readelf*** to know the dependent shared objects of a shared object or executable. See [man page for readelf](http://man7.org/linux/man-pages/man1/readelf.1.html) for more details
+
+```bash
+
+$ readelf -d /bin/ls | grep NEEDED
+ 0x0000000000000001 (NEEDED)             Shared library: [libselinux.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+
+```
