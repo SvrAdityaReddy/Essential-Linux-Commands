@@ -1,5 +1,15 @@
 # Essential-Linux-Commands
 
+### Changing User
+
+Here we use ***su*** command to change user in Linux. See [man page for su](http://man7.org/linux/man-pages/man1/su.1.html) for more details 
+
+```bash
+
+$ su - userName
+
+```
+
 ### Environment variables
 
 We use use ***env*** command to see the environment variables. See [man page for env](http://man7.org/linux/man-pages/man1/env.1.html) for more details
